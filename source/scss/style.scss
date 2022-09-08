@@ -1,0 +1,80 @@
+@import 'reset', 'mixins', 'fonts', 'vars', 'temps';
+
+.header {
+    position: relative;
+
+    &::after {
+        @include createLine();
+    }
+
+    &__container {
+        position: relative;
+        max-width: 1440px;
+        height: 80px;
+        padding: 20px 100px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        @extend %flexCenter;
+        position: absolute;
+        top: 10px;
+        left: 135px;
+    }
+
+    &__menu {
+        @extend %flexCenter;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+
+    }
+
+    &__btn {
+        @extend %flexCenter;
+        @include setFontStyle('Lato', 18px, 600, $primary-color, 0);
+        position: absolute;
+        top: 25%;
+        right: 5%;
+        width: 130px;
+        height: 40px;
+        padding: 10px 20px;
+        border: 1px $primary-color solid;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: #fff;
+            background: #18B5DC;
+            border: none;
+            cursor: url('../source/img/icons/cursor2030.png'), pointer;
+        }
+    }
+
+}
+
+.logo {
+    width: 170px;
+    height: 60px;
+
+    &__text {
+        @include setFontStyle('Train one', 30px, 400, $logo-text-color, 0);
+        text-transform: uppercase;
+    }
+}
+
+.menu {
+    @extend %flexCenter;
+    text-transform: uppercase;
+    gap: 30px;
+
+    &__item {
+        @include setFontStyle('Lato', 20px, 600, $primary-color, 0);
+
+        &:hover {
+            color: $hover-color;
+            cursor: url('../source/img/icons/cursor2030.png'), pointer;
+        }
+    }
+
+}

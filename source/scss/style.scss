@@ -42,100 +42,7 @@
     }
 
 }
-
-.main {
-    text-align: center;
-    max-width: 1368px;
-    margin: 0 auto;
-
-    .title {
-        @include setFontStyle('Lato', 34px, 600, $primary-color, 40px);
-        margin-top: 100px;
-    }
-
-    .subtitle {
-        @include setFontStyle('Lato', 16px, 300, $primary-color, 40px);
-        max-width: 500px;
-        margin: 0 auto;
-        text-transform: none;
-    }
-
-    &__cards {
-        @extend %flexCenter;
-        gap: 30px;
-        margin: 60px 100px 150px 100px;
-
-        .card {
-            position: relative;
-            text-align: left;
-            width: 270px;
-            height: 270px;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-
-            &:hover {
-                cursor: url("../source/img/icons/cursor2030.png"), pointer;
-                transform: rotateY(180deg);
-            }
-
-            &__front,
-            &__back {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 270px;
-                height: 270px;
-                background: $hover-color;
-                transform: rotateY(180deg);
-            }
-
-            &__back {
-                backface-visibility:hidden;
-            }
-
-            &__socials {
-                gap: 5px;
-                position: absolute;
-                left: 25%;
-                top: 45%;
-                width: 135px;
-                height: 42px;
-            }
-
-            &__svg>use:hover{
-                fill:#000;
-            }
-
-            &__title {
-                @include setFontStyle('Lato', 18px, 700, $logo-text-color, 0);
-                position: fixed;
-                bottom: -30px;
-                left: 0;
-                text-transform: none;
-                backface-visibility:hidden;
-            }
-
-            &__subtitle {
-                @include setFontStyle('Lato', 18px, 300, $primary-color, 0);
-                position: fixed;
-                bottom: -55px;
-                left: 0;
-                text-transform: none;
-                backface-visibility:hidden;
-            }
-        }
-    }
-
-}
-
-.logo {
-    width: 170px;
-    height: 60px;
-
-    &__text {
-        @include setFontStyle('Train one', 30px, 400, $logo-text-color, 0);
-    }
+   }
 }
 
 .menu {
@@ -152,10 +59,3 @@
         }
     }
 
-}
-
-.socials {
-    @extend %flexCenter;
-    width: 250px;
-    height: 42px;
-}

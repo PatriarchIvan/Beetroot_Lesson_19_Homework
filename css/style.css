@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,regular,700);
+@import url(https://fonts.googleapis.com/css?family=Train+One:regular);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 28px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.socials, .menu, .logo, .footer, .main__cards, .header__btn, .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #BDBDBD;
+  bottom: 0;
+}
+.header__container {
+  max-width: 1440px;
+  height: 80px;
+  padding: 20px 100px;
+  margin: 0 auto;
+}
+.header__btn {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 600;
+  color: #3C3C3C;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  width: 130px;
+  height: 40px;
+  padding: 10px 20px;
+  border: 1px #3C3C3C solid;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header__btn:hover {
+  color: #fff;
+  background: #18B5DC;
+  border: none;
+  cursor: url("../source/img/icons/cursor2030.png"), pointer;
+}
+
+.main {
+  text-align: center;
+  max-width: 1368px;
+  margin: 150px auto;
+}
+.main .title {
+  font-family: "Lato";
+  font-size: 34px;
+  font-weight: 600;
+  color: #3C3C3C;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+.main .subtitle {
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 300;
+  color: #3C3C3C;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  max-width: 500px;
+  margin: 0 auto;
+  text-transform: none;
+}
+.main__cards {
+  gap: 30px;
+  margin: 60px 100px 150px 100px;
+}
+.main__cards .card {
+  position: relative;
+  text-align: left;
+  width: 270px;
+  height: 270px;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.main__cards .card:hover {
+  cursor: url("../source/img/icons/cursor2030.png"), pointer;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.main__cards .card__front, .main__cards .card__back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 270px;
+  background: #18B5DC;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.main__cards .card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.main__cards .card__socials {
+  gap: 5px;
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  width: 135px;
+  height: 42px;
+}
+.main__cards .card__svg {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: #5DCBE6;
+}
+.main__cards .card__svg:hover {
+  background: #fff;
+  stroke: #18B5DC;
+}
+.main__cards .card__title {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 700;
+  color: #282528;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: -30px;
+  left: 0;
+  text-transform: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.main__cards .card__subtitle {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 300;
+  color: #3C3C3C;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: -55px;
+  left: 0;
+  text-transform: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  width: 170px;
+  height: 60px;
+}
+.logo__text {
+  font-family: "Train one";
+  font-size: 30px;
+  font-weight: 400;
+  color: #282528;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.menu {
+  text-transform: uppercase;
+  gap: 30px;
+  margin: 15px;
+}
+.menu__item {
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 600;
+  color: #3C3C3C;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.menu__item:hover {
+  color: #18B5DC;
+  cursor: url("../source/img/icons/cursor2030.png"), pointer;
+}
+
+.socials {
+  gap: 10px;
+  width: 250px;
+  height: 42px;
+}
+.socials__svg {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #18B5DC;
+  background: #18B5DC;
+  fill: #fff;
+}
+.socials__svg:hover {
+  fill: #18B5DC;
+  background: #fff;
+  cursor: url("../source/img/icons/cursor2030.png"), pointer;
+}

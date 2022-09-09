@@ -15,16 +15,6 @@
         margin: 0 auto;
     }
 
-
-    &__logo {
-        @extend %flexCenter;
-
-    }
-
-    &__menu {
-        @extend %flexCenter;
-    }
-
     &__btn {
         @extend %flexCenter;
         @include setFontStyle('Lato', 18px, 600, $primary-color, 0);
@@ -43,6 +33,7 @@
     }
 
 }
+
 .main {
     text-align: center;
     max-width: 1368px;
@@ -141,9 +132,8 @@
     @extend %flexCenter;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
 }
-
-
 
 .logo {
     @extend %flexCenter;
@@ -153,8 +143,6 @@
     &__text {
         @include setFontStyle('Train one', 30px, 400, $logo-text-color, 0);
     }
-
-   }
 }
 
 .menu {
@@ -173,11 +161,23 @@
     }
 
 }
+
 .socials {
     @extend %flexCenter;
     gap: 10px;
     width: 250px;
     height: 42px;
-
+    &__svg {
+        width: 40px;
+        height: 40px;
+        // padding: 8px;
+        border: 1px solid $hover-color ;
+        background: $hover-color;
+        fill: #fff;
+        &:hover {
+            fill: $hover-color; 
+            background: #fff;
+            cursor: url("../source/img/icons/cursor2030.png"), pointer;
+        }
+    }
 }
-

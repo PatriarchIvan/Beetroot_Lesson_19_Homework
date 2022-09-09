@@ -1,0 +1,172 @@
+@import 'reset', 'mixins', 'fonts', 'vars', 'temps';
+
+.header {
+    position: relative;
+
+    &::after {
+        @include createLine();
+    }
+
+    &__container {
+        @extend %flexCenter;
+        max-width: 1440px;
+        height: 80px;
+        padding: 20px 100px;
+        margin: 0 auto;
+    }
+
+    &__btn {
+        @extend %flexCenter;
+        @include setFontStyle('Lato', 18px, 600, $primary-color, 0);
+        width: 130px;
+        height: 40px;
+        padding: 10px 20px;
+        border: 1px $primary-color solid;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: #fff;
+            background: #18B5DC;
+            border: none;
+            cursor: url('../source/img/icons/cursor2030.png'), pointer;
+        }
+    }
+
+}
+
+.main {
+    text-align: center;
+    max-width: 1368px;
+    margin: 150px auto;
+
+    .title {
+        @include setFontStyle('Lato', 34px, 600, $primary-color, 40px);
+        margin-top: 100px;
+    }
+
+    .subtitle {
+        @include setFontStyle('Lato', 16px, 300, $primary-color, 40px);
+        max-width: 500px;
+        margin: 0 auto;
+        text-transform: none;
+    }
+
+    &__cards {
+        @extend %flexCenter;
+        gap: 30px;
+        margin: 60px 100px 150px 100px;
+
+        .card {
+            position: relative;
+            text-align: left;
+            width: 270px;
+            height: 270px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+
+            &:hover {
+                cursor: url("../source/img/icons/cursor2030.png"), pointer;
+                transform: rotateY(180deg);
+            }
+
+            &__front,
+            &__back {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 270px;
+                height: 270px;
+                background: $hover-color;
+                transform: rotateY(180deg);
+            }
+
+            &__back {
+                backface-visibility: hidden;
+            }
+
+            &__socials {
+                gap: 5px;
+                position: absolute;
+                left: 25%;
+                top: 45%;
+                width: 135px;
+                height: 42px;
+            }
+
+            &__svg {
+                width: 40px;
+                height: 40px;
+                padding: 8px;
+                background: #5DCBE6;
+
+                &:hover {
+                    background: #fff;
+                    stroke: $hover-color;
+                }
+            }
+
+            &__title {
+                @include setFontStyle('Lato', 18px, 700, $logo-text-color, 0);
+                position: fixed;
+                bottom: -30px;
+                left: 0;
+                text-transform: none;
+                backface-visibility: hidden;
+            }
+
+            &__subtitle {
+                @include setFontStyle('Lato', 18px, 300, $primary-color, 0);
+                position: fixed;
+                bottom: -55px;
+                left: 0;
+                text-transform: none;
+                backface-visibility: hidden;
+            }
+        }
+    }
+
+}
+
+.footer {
+    @extend %flexCenter;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.logo {
+    @extend %flexCenter;
+    width: 170px;
+    height: 60px;
+
+    &__text {
+        @include setFontStyle('Train one', 30px, 400, $logo-text-color, 0);
+    }
+}
+
+.menu {
+    @extend %flexCenter;
+    text-transform: uppercase;
+    gap: 30px;
+    margin: 15px;
+
+    &__item {
+        @include setFontStyle('Lato', 20px, 600, $primary-color, 0);
+
+        &:hover {
+            color: $hover-color;
+            cursor: url('../source/img/icons/cursor2030.png'), pointer;
+        }
+    }
+
+}
+
+.socials {
+    @extend %flexCenter;
+    gap: 10px;
+    width: 250px;
+    height: 42px;
+
+}

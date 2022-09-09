@@ -8,7 +8,7 @@
     }
 
     &__container {
-        position: relative;
+        @extend %flexCenter;
         max-width: 1440px;
         height: 80px;
         padding: 20px 100px;
@@ -17,25 +17,16 @@
 
     &__logo {
         @extend %flexCenter;
-        position: absolute;
-        top: 10px;
-        left: 135px;
+     
     }
 
     &__menu {
         @extend %flexCenter;
-        position: absolute;
-        top: 40%;
-        left: 40%;
-
     }
 
     &__btn {
         @extend %flexCenter;
         @include setFontStyle('Lato', 18px, 600, $primary-color, 0);
-        position: absolute;
-        top: 25%;
-        right: 5%;
         width: 130px;
         height: 40px;
         padding: 10px 20px;
